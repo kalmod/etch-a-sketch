@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Etch-a-Sketch</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+    <div id="grid-container" class="hide-caret"></div>
+    <div id="config-container" class="hide-caret">
+        <button class="clear-button"><span>Clear Canvas</span></button>
+        <button class="rainbow-button"><span>Rainbow</span></button>
+        <button class="shade-button"><span>Shade</span></button>
+        <label for="colorpicker">Select Color: </label>
+        <input type="color" id="colorpicker" value="rgb(0,0,0)">
+        <div class="slidecontainer">
+            <input type="range" min = '1' max = '100' value="16" class ='slider' id="myRange">
+            <span class="sliderValue">16</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+:root{
+    --cell-width: 0;
+    --cell-height: 0;
+    --bg-color: 243, 231, 211;
+    --opacity-level:  1.0;
+    --container-dimensions: 600;
+}
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: navajowhite;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#grid-container{
+    min-width: calc(var(--container-dimensions)*1px);
+    max-width: calc(var(--container-dimensions)*1px);
+    min-height: calc(var(--container-dimensions)*1px);
+    max-height: calc(var(--container-dimensions)*1px);
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(var(--cell-width)*1px), 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(calc(var(--cell-height)*1px), 1fr));
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.hide-caret{
+    caret-color: transparent;
+}
+
+.grid-cell{
+    background-color: rgba(var(--bg-color), var(--opacity-level));
+    border: 1px solid black;
+    transition: background-color 0.25s;
+}
+
+button{
+    background-color: rgb(var(--bg-color));
+}
+
+.shade-animation{
+    animation: shading 5s ease-in-out infinite;
+}
+
+.rainbow-animation{
+    animation: rainbow-ani 5s ease-in-out infinite;
+}
+
+
+@keyframes shading {
+    0%, 100%{
+        color: black;
+    }
+    50%{
+        background-color: black;
+        color: white;
+    }
+    
+}
+
+@keyframes rainbow-ani {
+    0%, 100%{
+        color: black;
+    }
+    12% {
+        background-color: red;
+        color: black;
+        
+    }
+    24% {
+        background-color: orange;
+        color: black;
+    }
+    36% {
+        background-color: yellow;
+        color: black;
+    }
+    48% {
+        background-color: green;
+        color: black;
+    }
+    60% {
+        background-color: blue;
+        color: white;
+    }
+    72% {
+        background-color: indigo;
+        color: white;
+    }
+    84% {
+        background-color: violet;
+        color: black;
+    }
+}
