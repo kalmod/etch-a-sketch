@@ -13,5 +13,9 @@ Etch-a-Sketch project from the odin project. [Link Here](https://www.theodinproj
 3. Allow user to adjust size of grids.
     * Max of 100. - Slider to select value (1-100) :heavy_check_mark:
     * Include text box to manually enter values instead of only using slider?
-4. Update Styles
-5. Add color picker.
+4. Update Styles :heavy_check_mark:
+5. Add color picker. :heavy_check_mark:
+
+[Javscript Data-Attributes](https://blog.webdevsimplified.com/2020-10/javascript-data-attributes/)
+[Range Sliders](https://www.w3schools.com/howto/howto_js_rangeslider.asp)
+[HEXtoRGB](https://convertingcolors.com/blog/article/convert_hex_to_rgb_with_javascript.html)

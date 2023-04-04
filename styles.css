@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: navajowhite;
+    background-color: #FFE6C7;
     height: 100vh;
     margin: 0;
     display: flex;
@@ -19,13 +19,18 @@ body{
     align-items: center;
     gap: 2em;
 }
+h1{
+    font-family: 'Covered By Your Grace';
+    font-size: 84px;
+    margin: 10px 0px;
+}
 
 #grid-container{
     min-width: calc(var(--container-dimensions)*1px);
     max-width: calc(var(--container-dimensions)*1px);
     min-height: calc(var(--container-dimensions)*1px);
     max-height: calc(var(--container-dimensions)*1px);
-    border: 3px solid black;
+    border: 3px solid #454545;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(var(--cell-width)*1px), 1fr));
     grid-template-rows: repeat(auto-fit, minmax(calc(var(--cell-height)*1px), 1fr));
@@ -40,12 +45,16 @@ body{
 
 .grid-cell{
     background-color: rgba(var(--bg-color), var(--opacity-level));
-    border: 1px solid black;
+    border: 1px solid #454545;
     transition: background-color 0.25s;
 }
 
 button{
     background-color: rgb(var(--bg-color));
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #454545;
+
 }
 
 .shade-animation{
@@ -101,4 +110,81 @@ button{
         background-color: violet;
         color: black;
     }
+}
+
+#config-container{
+    border: 2px solid #FFA559;
+    Height: 100px;
+    width: calc(var(--container-dimensions)*1px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Figtree';
+    font-weight: bold;
+}
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.color-container{
+    display: inline-block;
+}
+
+.slidecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    -webkit-appearance: none;
+    background: #FFA559;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    height: 15px;
+    border-radius: 10px;
+    width: 200px;
+}
+.sliderValue{
+    padding-left: 5px;
+    width: 20px;
+}
+
+.slider:hover{
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #FF6000;
+}
+.slider::-moz-range-thumb{
+    background: #FF6000;
+
+}
+
+#colorpicker{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #ff6000;
+    opacity: 0.8;
+}
+#colorpicker::-webkit-color-swatch{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    border: none;
 }
